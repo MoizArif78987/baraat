@@ -1,0 +1,50 @@
+.page-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.page-intro__panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 52%;
+  background: var(--intro-bg, #5c0a1f);
+}
+
+.page-intro__panel--left {
+  left: 0;
+}
+
+.page-intro__panel--right {
+  right: 0;
+}
+
+.page-intro__label {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 8vw, 3rem);
+  color: var(--intro-fg, #f7f2ef);
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+}
+
+.page-intro__shine {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  width: 28%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+  transform: skewX(-18deg);
+}

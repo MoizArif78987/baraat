@@ -1,4 +1,6 @@
 .closing {
+  position: relative;
+  overflow: hidden;
   padding: var(--space-2xl) var(--page-pad);
   padding-left: max(var(--page-pad), env(safe-area-inset-left));
   padding-right: max(var(--page-pad), env(safe-area-inset-right));

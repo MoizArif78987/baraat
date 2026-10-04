@@ -1,4 +1,6 @@
 .details {
+  position: relative;
+  overflow: hidden;
   background: var(--pearl-deep);
   padding-top: 0;
 }
@@ -17,8 +19,14 @@
 }
 
 .details__photo {
-  min-height: 14rem;
+  min-height: 12rem;
   width: 100%;
+}
+
+.details__photo .image-placeholder__img {
+  object-fit: contain;
+  object-position: center;
+  padding: 0.75rem 0.5rem;
 }
 
 .details__content {

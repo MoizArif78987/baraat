@@ -54,13 +54,31 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* Lenis owns smooth scrolling — keep native behavior off to avoid double-easing */
+  scroll-behavior: auto;
   overflow-x: hidden;
   overflow-y: auto;
   width: 100%;
   max-width: 100%;
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
 
 html::-webkit-scrollbar {

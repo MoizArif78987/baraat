@@ -67,6 +67,53 @@ body::before {
   transform-origin: center;
 }
 
+.shimmer-text {
+  background: linear-gradient(
+    110deg,
+    var(--rosewood) 20%,
+    var(--copper-light) 42%,
+    var(--rosewood) 60%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-sweep 3.8s linear infinite;
+}
+
+.shimmer-text--light {
+  background: linear-gradient(
+    110deg,
+    #f7f2ef 15%,
+    #d4a06a 45%,
+    #f7f2ef 70%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: -100% center;
+  }
+}
+
+.details,
+.venue,
+.closing {
+  position: relative;
+  overflow: hidden;
+}
+
+.venue__map-wrap {
+  position: relative;
+}
+
 @media (min-width: 768px) {
   .section-label {
     font-size: 0.75rem;
