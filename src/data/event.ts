@@ -1,7 +1,10 @@
 export const event = {
   label: "Baraat",
-  groom: "Abdul Moiz Arif",
+  hosts: "Mr & Mrs Arif Saleem",
+  son: "Abdul Moiz Arif",
   bride: "Fatima Zafar",
+  inviteLine: "invite you to celebrate",
+  closingNote: "We would be honoured by your presence",
   dateDisplay: "January 2, 2027",
   day: "Saturday",
   time: "12:00 PM – 4:00 PM",

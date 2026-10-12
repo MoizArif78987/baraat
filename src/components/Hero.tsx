@@ -63,7 +63,7 @@ export function Hero() {
         >
           <ImagePlaceholder
             src={event.images.hero}
-            alt="Abdul Moiz Arif and Fatima Zafar illustration"
+            alt="Baraat celebration illustration"
             label="Hero illustration"
             className="hero__placeholder"
           />
@@ -83,24 +83,35 @@ export function Hero() {
           {event.label}
         </motion.p>
 
+        <motion.p
+          className="hero__hosts"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+        >
+          {event.hosts}
+        </motion.p>
+
+        <motion.p
+          className="hero__invite"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
+        >
+          {event.inviteLine}
+        </motion.p>
+
         <h1 className="hero__names">
-          <AnimatedName text={event.groom} delay={0.45} />
-          <motion.span
-            className="hero__amp"
-            initial={{ opacity: 0, scale: 0.4, rotate: -20 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ type: "spring", stiffness: 160, damping: 12, delay: 1.2 }}
-          >
-            &
-          </motion.span>
-          <AnimatedName text={event.bride} delay={1.4} />
+          <AnimatedName text={event.son} delay={0.85} />
+          <span className="hero__amp">&</span>
+          <AnimatedName text={event.bride} delay={1.25} />
         </h1>
 
         <motion.p
           className="hero__date"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2.15, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 2.05, ease: [0.16, 1, 0.3, 1] }}
         >
           {event.dateDisplay}
         </motion.p>
@@ -110,7 +121,7 @@ export function Hero() {
           className="hero__cta"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2.35, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 2.25, ease: [0.16, 1, 0.3, 1] }}
           whileHover={{ y: -3, letterSpacing: "0.24em" }}
           whileTap={{ scale: 0.97 }}
         >
