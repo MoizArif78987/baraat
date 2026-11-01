@@ -18,7 +18,7 @@ export function VenueMap() {
           <h2 id="venue-heading" className="section-title shimmer-text">
             {event.venue}
           </h2>
-          <p className="section-copy">Find your way to the celebration.</p>
+          <p className="section-copy">We look forward to welcoming you.</p>
         </motion.div>
 
         <motion.div
